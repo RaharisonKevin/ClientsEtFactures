@@ -5,13 +5,16 @@ import java.util.List;
 
 public class Client
 {
-	/** 
-	 * Crée un client.
-	 * @param nom le nom du client. 
-	 */
-	
+	private String nom;
+	private List<Client> clients = new ArrayList<Client>();
+
+		
 	public Client(String nom)
 	{
+		
+		this.nom = nom;
+		
+		clients.add(this);
 	}
 
 	/**
@@ -21,7 +24,7 @@ public class Client
 	
 	public String getNom()
 	{
-		return null;
+		return nom;
 	}
 	
 	/**
